@@ -1,0 +1,178 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-23T23:37:32.614Z",
+    "end": "2024-11-23T23:37:43.531Z",
+    "duration": 10917,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4bd7e246-897b-4474-9858-cb2911fc42c9",
+      "title": "",
+      "fullFile": "cypress\\e2e\\ListaUI.cy.js",
+      "file": "cypress\\e2e\\ListaUI.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "de490dbb-53a1-43f6-87f3-a7997ffa8be2",
+          "title": "Adicionar múltiplos computadores",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve adicionar mais de um computador",
+              "fullTitle": "Adicionar múltiplos computadores Deve adicionar mais de um computador",
+              "timedOut": null,
+              "duration": 5803,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Adicionar o primeiro computador\nadicionarComputador('Computador maneiro', '2024-11-22', '2025-11-22', 'Sanyo');\n// Adicionar o segundo computador\nadicionarComputador('Computador super rápido', '2023-06-15', '2025-01-10', 'Apple Inc.');\n// Adicionar o terceiro computador\nadicionarComputador('Computador gamer', '2024-01-10', '2025-01-10', 'Nintendo');",
+              "err": {},
+              "uuid": "4f2f696f-4bd3-4df3-8314-02f3461a178a",
+              "parentUUID": "de490dbb-53a1-43f6-87f3-a7997ffa8be2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4f2f696f-4bd3-4df3-8314-02f3461a178a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5803,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "f1456b18-4c7e-4dc5-82db-7eee95e42d5f",
+          "title": "Filtrar computadores",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve filtrar computadores pelo nome",
+              "fullTitle": "Filtrar computadores Deve filtrar computadores pelo nome",
+              "timedOut": null,
+              "duration": 898,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://computer-database.gatling.io/computers');\n// Buscar por \"Apple\"\ncy.get('#searchbox').type('Apple');\ncy.get('#searchsubmit').click();\n// Verificar se a tabela contém computadores da Apple\ncy.get('table').contains('Apple').should('be.visible');",
+              "err": {},
+              "uuid": "62616ac7-cfa4-4d14-9563-258601f2d4af",
+              "parentUUID": "f1456b18-4c7e-4dc5-82db-7eee95e42d5f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "62616ac7-cfa4-4d14-9563-258601f2d4af"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 898,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "d11c3d5d-6a87-432d-bc1c-76c1343053dd",
+          "title": "Tenta achar computador inexistente ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Procura computador pelo nome",
+              "fullTitle": "Tenta achar computador inexistente  Procura computador pelo nome",
+              "timedOut": null,
+              "duration": 2216,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Adicionar o primeiro computador\nadicionarComputador('maneiro', '2022-11-21', '2025-11-22', 'Sanyo');\ncy.get('#searchbox').type('Erro');\ncy.get('#searchsubmit').click();\ncy.get('em').should(\"contain.text\", \"Nothing to display\");",
+              "err": {},
+              "uuid": "78df4d61-9c9e-477f-8bdb-7a68a5d8b847",
+              "parentUUID": "d11c3d5d-6a87-432d-bc1c-76c1343053dd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "78df4d61-9c9e-477f-8bdb-7a68a5d8b847"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2216,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
