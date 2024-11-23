@@ -21,7 +21,7 @@ describe('Adicionar múltiplos computadores', () => {
     adicionarComputador('Computador maneiro', '2024-11-22', '2025-11-22', 'Sanyo');
 
     // Adicionar o segundo computador
-    adicionarComputador('Computador super rápido', '2023-06-15', '2024-06-15', 'Apple Inc.');
+    adicionarComputador('Computador super rápido', '2023-06-15', '2025-01-10', 'Apple Inc.');
 
     // Adicionar o terceiro computador
     adicionarComputador('Computador gamer', '2024-01-10', '2025-01-10', 'Nintendo');
@@ -38,5 +38,19 @@ describe('Filtrar computadores', () => {
   
     // Verificar se a tabela contém computadores da Apple
     cy.get('table').contains('Apple').should('be.visible');
+  });
+});
+
+
+describe('Tenta achar computador inexistente ', () => {
+  it('Procura computador pelo nome', () => {
+    // Adicionar o primeiro computador
+    adicionarComputador('maneiro', '2022-11-21', '2025-11-22', 'Sanyo');
+    cy.get('#searchbox').type('Erro');
+    cy.get('#searchsubmit').click();
+    cy.get('em').should("contain.text","Nothing to display");
+    
+  
+
   });
 });
