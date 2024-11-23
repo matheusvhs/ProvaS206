@@ -1,5 +1,9 @@
 # Prova S206 - Teste de UI 
 
+## Entrega Report
+
+  - [Report Mochawesome](https://github.com/matheusvhs/ProvaS206/blob/main/Teste%20de%20UI/cypress/reports/html/index.html)
+
 
 ## Instalação das Dependências 
 
