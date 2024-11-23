@@ -2,7 +2,7 @@
 
 ## Entrega Report
 
-  - [Report Mochawesome](https://github.com/matheusvhs/ProvaS206/blob/main/Teste%20de%20UI/cypress/reports/html/index.html)
+  - [Report Mochawesome](https://github.com/matheusvhs/ProvaS206/blob/main/Teste%20de%20UI/cypress/reports/html/)
 
 
 ## Instalação das Dependências 
